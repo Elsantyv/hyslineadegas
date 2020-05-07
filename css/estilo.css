@@ -151,6 +151,58 @@ nav a:hover{
 
 }
 
+.icono{
+
+  color:var(--colorprimario);
+  font-size: 2rem;
+  cursor: pointer;
+  display: none;
+  text-align: center;
+  padding-top: 2rem;
+
+}
+
+#check{
+
+  display: none;
+
+}
+
+@media(max-width:768px) {
+
+  .icono{
+
+    display: block;
+
+  }
+
+  .nav-mobile{
+
+    position: fixed;
+    width: 99%;
+    height: 178px;
+    background-color: #2C3E50;
+    top: 210px;
+    left: -100%;/**Lo esconde a la izquierda**/
+    text-align: center;
+    transition: all .5s;
+
+  }
+
+  .nav-mobile a{
+
+    display: block;
+
+  }
+
+  #check:checked ~ .nav-mobile{
+
+    left: 0;
+
+  }
+
+}
+
 .contenido-principal{
 
   display: flex;
