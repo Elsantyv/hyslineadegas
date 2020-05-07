@@ -1,0 +1,377 @@
+/**Variables**/
+:root{
+
+  --fuentelinea: 'PT Sans Caption', sans-serif;
+  --fuentehys: 'Patua One', cursive;
+  --colorprimario: #4760A4;
+  --colorsegundario: #F8E93B;
+
+}
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body{
+
+  background-color: var(--colorprimario);
+
+}
+
+.cuerpo{
+
+  max-width: 1200px;
+  width: 95%;
+  margin: 0 auto;
+  background-color: WHITE;
+  border-radius: 10px;
+
+}
+
+aside{
+
+  padding-bottom: 2rem;
+
+}
+
+/**General**/
+
+.contenedor{
+
+  max-width: 1200px;
+  width: 95%;
+  margin: 0 auto;
+
+}
+
+h1{
+
+  font-family: var(--fuentehys);
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--colorprimario);
+
+}
+
+h2{
+
+  font-family: var(--fuentelinea);
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--colorprimario);
+
+}
+
+h1 span{
+
+  font-family: var(--fuentelinea);
+
+}
+
+/**Header**/
+
+div.contenedorlogo {/**logo responsive**/
+width: 96%;
+max-width: 20rem;
+}
+
+.logo{/**Logo responsive**/
+
+  width: 100%;
+  height: auto;
+
+}
+
+nav a{
+
+  font-family: var(--fuentehys);/**Fuente**/
+  font-size: 1.5rem;/**Tamaño fuente**/
+  text-decoration: none;/**Quitarle decoracion**/
+  color: var(--colorprimario);/**Color fuente**/
+  display: block;
+  float: none;
+  margin-top: 1rem;
+  text-align: center;
+  border-bottom:1px solid var(--colorprimario);
+
+}
+
+.footer{
+
+  display: none;
+
+}
+
+nav a:hover{
+
+    color: var(--colorsegundario);
+
+}
+
+
+@media(min-width:768px) {/**Menu para web**/
+
+  .menu-mobile{
+
+    display: none;
+
+  }
+
+  .menu{
+
+    display: flex;/**Activamos el flex-box**/
+    padding-top: 1rem;/**Distancia desde arriba**/
+    justify-content: space-between;/**Los posiciona a los extremos**/
+    align-items: center;/**Centra verticalmente**/
+
+  }
+
+  nav a{
+
+    font-family: var(--fuentehys);/**Fuente**/
+    font-size: 1.5rem;/**Tamaño fuente**/
+    text-decoration: none;/**Quitarle decoracion**/
+    color: var(--colorprimario);/**Color fuente**/
+    display: inline-block;/**Acomodir en linea y con separacion**/
+    margin-right: 2rem;/*Separacion a la derecha dentre elementos*/
+    border-bottom:none;
+    left: -100%;
+
+  }
+
+  .footer{
+
+    display: block;
+
+  }
+
+}
+
+.contenido-principal{
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+@media(min-width:768px) {
+
+  .contenido-principal{
+
+    display: grid;/**Activamos el grid**/
+    grid-template-columns: repeat(2, 1fr);/**2 columnas**/
+    column-gap: 5rem;/**Separacion de las columnas**/
+
+
+  }
+
+}
+
+.somos p{
+
+  font-size: 1.4rem;/**Tamaño de la fuente**/
+  text-align: justify;/**Fuente justificada**/
+
+}
+
+.somos-imagen {
+width: 96%;
+max-width: 30rem;
+
+}
+
+.somos-imagen img{
+
+  width: 100%;
+  height: auto;
+
+}
+
+/**Formulario**/
+
+form{
+
+  background-color: var(--colorprimario);/**Color del formulario**/
+  padding: 2rem;/**Separacion **/
+  border-radius: 10px;/**Radio de los bordes del formulario**/
+  max-width: 800px;/**Tamaño del formulario**/
+  margin: 0 auto;/**Centra el formulario en el espacio disponible de la clase padre**/
+
+}
+
+.campo {
+
+    display: flex;/**Activamos el flex-box**/
+    margin-bottom: 1rem;/**Destancia de los campos por abajo**/
+    padding-right: 2rem;;/**Distancia desde arriba**/
+    align-items: center;/**Centra verticalmente**/
+
+}
+.campo label {
+
+    flex: 0 0 9rem;
+    color: WHITE;
+}
+
+.campo input[type="text"],/**Tamaño de los campos horizontal**/
+.campo input[type="tel"],
+.campo input[type="mail"],
+.campo textarea {
+
+    flex: 1;
+    height: rem;
+
+}
+
+.campo textarea {/**Tamaño del campo en vertical**/
+
+    height: 4rem;
+
+}
+
+.boton{
+
+  font-family: var(--fuentehys);
+  background-color: var(--colorsegundario);/**Color boton**/
+  color: var(--colorprimario);/**Color texto boton**/
+  font-weight: 400;/**Grosor de la letra del boton**/
+  text-transform: uppercase;/**Toda en mayuscula**/
+  font-size: 1.2rem;/**Tamaño de la letra**/
+  text-align: center;
+  padding: .5rem 3rem;/**Alto y ancho del boton**/
+  border-radius: 5px;/**Radio de las puntas del boton**/
+  display: inline-block;
+  margin-top: .5rem;/**Margen por arriba**/
+  flex: 0 0 100%;
+
+}
+
+.boton:hover{
+    cursor: pointer;/**Cambiar cursor por la mano**/
+}
+
+
+@media(min-width:768px) {
+
+.boton{
+
+
+
+}
+
+}
+
+/**Footer**/
+
+.info p{
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start; /*Nos permite alinear a los extremos verticalmente*/
+  padding-bottom: 0.1rem;
+  color: WHITE;
+
+}
+
+.footer a{
+
+  color: WHITE;
+  font-size: 1rem;
+
+}
+
+/**Conocenos**/
+
+.lista-conocenos{
+
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);/**Division entre elementos por columnas de a 2**/
+  grid-gap: 2rem;/**Separacion entre elementos**/
+  padding-left: 1rem;
+
+}
+
+@media(min-width:768px) {
+
+  .lista-conocenos{
+
+    grid-template-columns: repeat(2, 1fr);/**Division entre elementos por columnas de a 3**/
+
+  }
+
+}
+
+.contenedorgrafico {/**Imagen challenger y BOSCH responsive**/
+width: 96%;
+max-width: 960px;
+margin: 0 auto;
+}
+.contenedorgrafico img {
+width: 100%;
+height: auto;
+}
+
+.cuerpo .grafico{/**Centra la imagen**/
+
+  padding: 2rem 0;
+  display:block;
+  margin:auto;
+
+}
+
+.conocenos{
+
+  text-align: center;
+
+}
+
+.conocenos p{
+
+  font-family: var(--fuentelinea);
+  font-size: 1.2rem;
+  text-align: justify;
+  padding: 0 2rem;
+
+}
+
+main .porta{
+
+  font-size: 3rem;
+
+}
+
+main h2{
+
+  font-size: 2rem;
+
+}
+
+.mapa{
+
+  box-sizing: content-box;
+  width: auto;
+  height: 30rem;
+  /*border: solid #5B6DCD 10px;*/
+  padding: 5px;
+
+}
+
+.informacion{
+
+  text-align: center;
+  font-family: var(--fuentelinea);
+  font-size: 1.5rem;
+  color: var(--colorprimario);
+
+}
+
+.informacion span{
+
+  font-weight: bold;
+
+}

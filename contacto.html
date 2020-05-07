@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Patua+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilo.css">
+
+    <title>H y S Linea de gas</title>
+
+    <link rel="stylesheet" href="">
+
+  </head>
+
+  <body>
+
+    <div class="cuerpo">
+
+      <header>
+
+        <div class="contenedor">
+
+          <div class="menu">
+
+            <div class="contenedorlogo">
+
+              <img class="logo" src="Recursos/logo.png" alt="Logo H y S Linea de gas">
+
+            </div>
+
+            <div class="nav">
+
+              <nav>
+
+                <a href="index.html">Inicio</a>
+                <a href="conocenos.html">Conocenos</a>
+                <a href="servicios.html">Servicios</a>
+                <a href="contacto.html">Contáctenos</a>
+
+              </nav>
+
+            </div><!--nav-->
+
+          </div><!--Menu-->
+
+        </div><!--contenedor-->
+
+      </header>
+
+      <aside class="contenedor">
+
+        <div class="contacto" id="contacto">
+
+          <h2>Dejanos tus datos y nosotros te contactamos</h2>
+
+          <form class="" name="frmcorreo" method="post" action="enviarcorreo.php">
+
+            <div class="contenedor-campos">
+
+              <div class="campo">
+
+                <label>Nombre Completo.</label>
+                <input type="text" name="nombre" placeholder="Nombre Completo">
+
+              </div><!--campo-->
+
+              <div class="campo">
+
+                <label>Correo Electronico.</label>
+                <input type="mail" name="mail" value="Correo Electronico">
+
+              </div><!--campo-->
+
+              <div class="campo">
+
+                <label>Numero de contacto.</label>
+                <input type="tel" name="telefono" value="Numero Telefonico">
+
+              </div><!--campo-->
+
+              <div class="campo">
+
+                <label>Mensaje.</label>
+                <textarea>Coméntanos tu problema...</textarea>
+
+              </div><!--campo-->
+
+            </div><!--contenedor-campo-->
+
+            <div class="btnenviar">
+
+              <input class="boton" type="submit" value="Enviar">
+
+            </div><!--btnenviar-->
+
+          </form>
+
+        </div><!--contacto-->
+
+      </aside>
+
+      <main>
+
+          <h1>INFORMACIÓN</h1>
+
+          <div class="informacion">
+
+            <p><span>Dirección:</span> Carrera 79 # 44A - 12. Medellín.</p>
+            <p><span>Barrio:</span> La America.</p>
+            <p><span>Celular:</span>311-323-1887.</p>
+            <p><span>PBX:</span> 4484942.</p>
+
+          </div>
+
+          <div id="mapa" class="mapa">
+
+          </div>
+
+      </main>
+
+
+    </div><!--Cuerpo-->
+
+    <footer>
+
+      <div class="contenedor">
+
+        <div class="menu">
+
+          <div class="info">
+
+            <p>© H&S Linea De Gas - Todos los derechos reservados - Desarrollado por: VanegasDesarrollo</p>
+
+          </div><!--info-->
+
+          <nav class="footer">
+
+            <a href="index.html">Inicio</a>
+            <a href="conocenos.html">Conocenos</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="contacto.html">Contáctenos</a>
+
+          </nav>
+
+      </div><!--nav-->
+
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="javascript/script.js"></script>
+
+  </body>
+
+</html>
